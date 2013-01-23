@@ -17,8 +17,9 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 a { color: #00e; }
 a:visited { color: #551a8b; }
 a:hover { color: #06e; }
-a:focus { outline: thin dotted; }
+a:focus { outline: none; }
 a:hover, a:active { outline: 0; }
+nav ul li:hover{background-color:#3C3C3B;}
 
 abbr[title] { border-bottom: 1px dotted; }
 b, strong { font-weight: bold; }
@@ -37,7 +38,7 @@ sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
 dd { margin: 0 0 0 40px; }
-nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0;  }
 img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 svg:not(:root) { overflow: hidden; }
 figure { margin: 0; }
@@ -62,13 +63,21 @@ table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
 
+
+
 /* ===================================================
     Initializr styles
     http://verekia.com/initializr/responsive-template
     Author: Jonathan Verrecchia
    =================================================== */
 
-body{ font:16px/24px Helvetica, Helvetica Neue, Arial, sans-serif; }
+
+
+body{ 
+    font:16px/24px Helvetica, Helvetica Neue, Arial, sans-serif;
+    background:"css/fondo1.jpg";
+        
+}
 
 .wrapper{
 	width:90%;
@@ -76,17 +85,19 @@ body{ font:16px/24px Helvetica, Helvetica Neue, Arial, sans-serif; }
 }
 
 /* ===================
-    ALL: Orange Theme
+    ALL: General
    =================== */
 
-#header-container{ border-bottom: 20px solid #e44d26; }
-#footer-container{ border-top:    20px solid #e44d26; }
-#main aside      { border-top:    20px solid #e44d26; }
+#header-container{
+    background:#F73F08
+}
 
-#header-container,
-#footer-container,
+#footer-container{
+    background:#08F73B
+    
+}
 #main aside{
-	background:#f16529;
+	background:#656663;
 }
 
 #title{ color:white; }
@@ -96,19 +107,26 @@ body{ font:16px/24px Helvetica, Helvetica Neue, Arial, sans-serif; }
 
 /* ==============
     MOBILE: Menu
-   ============== */
+   ============== 
 
 nav a{
 	display:block;
 	margin-bottom:10px;
 	padding:15px 0;
 
-	background:#e44d26;
+	background:#CFF708; 
 	color:white;
 
 	text-align:center;
 	text-decoration:none;
 	font-weight:bold;
+}
+
+nav li a{
+    padding: 1% 2% 1% 2%
+}
+nav li a:hover{
+    background-color:#3C3C3B;
 }
 
 nav a:hover, nav a:visited{
@@ -117,14 +135,14 @@ nav a:hover, nav a:visited{
 
 nav a:hover{
 	text-decoration:underline;
-}
+}*/
 
 /* ==============
     MOBILE: Main
-   ============== */
+   ============== 
 
 #main{
-	padding:30px 0;
+	padding: 60px 0 30px 0;
 }
 
 #main article h1{
@@ -139,7 +157,7 @@ nav a:hover{
 #footer-container footer{
 	color:white;
 	padding:20px 0;
-}
+}*/
 
 /* ===============
     ALL: IE Fixes
@@ -166,11 +184,11 @@ nav a:hover{
 
 /* ====================
     INTERMEDIATE: Menu
-   ==================== */
+   ==================== 
 	
 	nav a{
 		float:left;
-		width:27%;
+		width: 13%;
 		margin:0 1.7%;
 		padding:25px 2%;
 		margin-bottom:0;
@@ -181,14 +199,11 @@ nav a:hover{
 	
 /* ========================
     INTERMEDIATE: IE Fixes
-   ======================== */
+   ======================== 
 
-	nav ul li{
-		display:inline;
-	}	
 	.oldie nav a{
 		margin:0 0.7%;		
-	}
+	}*/
 }
 
 @media only screen and (min-width: 768px) {
@@ -197,25 +212,46 @@ nav a:hover{
     WIDE: CSS3 Effects
    ==================== */
 
-	#header-container,
+	#header-container{
+        width:90%;
+        margin:0 auto;
+        margin-top:20px;
+        padding-top:95px;
+        padding-bottom:95px;
+	}
 	#main aside{
 		-webkit-box-shadow:0 5px 10px #aaa;
 		   -moz-box-shadow:0 5px 10px #aaa;
 		        box-shadow:0 5px 10px #aaa;
 	}
+    
+    nav ul li a{
+        border-radius: 10px;
+    }
+    
+    #navigator nav ul {
+        Background-color:black;
+    }
 
 /* ============
     WIDE: Menu
    ============ */
 	
 	#title{
-		float:left;
+		text-align:center;
 	}
 
 	nav{
-		float:right;
-		width:38%;
+		display:block;
+        margin:0 auto;
+        top: 67px;
+		width:80%;
+        margin-top:30px;
+        margin-bottom:30px;
+        background:#000000;
+        border-radius: 10px;
 	}
+    nav ul
 
 /* ============
     WIDE: Main
