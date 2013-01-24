@@ -271,7 +271,6 @@ nav a:hover{
 	#title{
 		text-align:center;
         float:right;
-        margin-right:10%;
 	}
 
 
@@ -374,13 +373,21 @@ nav a:hover{
     position: absolute;
     line-height: 200%;
     display: inline-block;
+    width: auto;
+    margin-left:45%;
 }
 
 #main > section {
-    margin: 0;
-    width: 55%;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 59%;
+    margin-left: 4%;
 }
-#main-container {
+#main > aside {
+    margin-right: 4%;
+    width: 29%;
+}
+#main-container * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
