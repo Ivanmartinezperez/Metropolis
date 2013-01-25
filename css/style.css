@@ -92,17 +92,12 @@ body{
     ALL: Visual setting(colors)
    =================== */
 
-#header-container{
-    background:url("logo_metropolis.jpg");
-}
 
 #footer-container{
-    background:#08F73B
+    background:#08F73B;
     
 }
-#main aside{
-	background:#656663;
-}
+
 #main section{
     background:#F3F708;
 }
@@ -216,10 +211,11 @@ nav a:hover{
 @media only screen and (min-width: 768px) {
 
 /* ====================
-    WIDE: CSS3 Effects
+    Pantalla Completa: Header
    ==================== */
 
 	#header-container{
+        background:url("logo_metropolis.jpg");
         width:77%;
         margin:0 auto;
         margin-top:20px;
@@ -231,17 +227,37 @@ nav a:hover{
 		        box-shadow:0 14px 20px 5px #9D9C9F ;
 	}
     
-	#main aside{
-		-webkit-box-shadow:0 5px 10px #aaa;
-		   -moz-box-shadow:0 5px 10px #aaa;
-		        box-shadow:0 5px 10px #aaa;
+    #header-container header {
+        position: absolute;
+        line-height: 200%;
+        display: inline-block;
+        width: auto;
+        margin-left:45%;
+    }
+    
+    #title{
+    	text-align:center;
+        float:right;
 	}
     
+/* ====================
+    Pantalla Completa: Navegador
+   ==================== */
+    
     nav{
+        display:block;
+        margin:0 auto;
+        top: 67px;
+		width:77%;
+        margin-top:30px;
+        margin-bottom:30px;
+        background:#000000;
+        border-radius: 10px;
         -webkit-box-shadow:0 14px 20px #9D9C9F;
-    	   -moz-box-shadow:0 14px 20px #9D9C9F;
-		        box-shadow:0 14px 20px 5px #9D9C9F ;
+    	-moz-box-shadow:0 14px 20px #9D9C9F;
+		box-shadow:0 14px 20px 5px #9D9C9F ;
     }
+
     
     nav ul li{
         display:inline;
@@ -264,71 +280,72 @@ nav a:hover{
         border-radius:10px;
     }
 
+	    
 /* ============
-    WIDE: Menu
-   ============ */
-	
-	#title{
-		text-align:center;
-        float:right;
-	}
-
-
-	nav{
-		display:block;
-        margin:0 auto;
-        top: 67px;
-		width:77%;
-        margin-top:30px;
-        margin-bottom:30px;
-        background:#000000;
-        border-radius: 10px;
-	}
-    
-
-
-/* ============
-    WIDE: Main
+    Pantalla Comple: Main
    ============ */
 
     #main-container{
         width:77%;
         margin:0 auto;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
     }
+    
+    
     #main{
         width:100%;
         overflow: hidden;
         position: relative;
     }
     
+    /* LEFT SIDE OF SCREEN (ARTICLE,BANDS,NEWS)*/
 	#main > section{
         display:block;
 		float:left;
-		width:40%;
-        margin-left:80px;
+		width:35%;
+        margin-left:3%;
         margin-right: 0px;
         margin-bottom:20px;
         margin-top:20px;
         border-radius:10px;
-        padding-right:40px;
-        padding-left:40px;
         list-style-type:none;
+        padding-right:20px;
+        padding-left:20px;
+        width: 59%;
+        margin-left: 4%;
+        opacity:0.7;
+        position:relative;
 	}
     
-    #main article{
+    section > article{
         display:list-item;
         background:#F708DF;
+        position:relative;
         /*padding:0 30% 0 30%;*/
     }
-		
+	
+    /* RIGHT SIDE OF SCREEN (FOLLOW US,CONTACT,etc)*/
+    
 	#main aside {
+        background:#656663;
         display:block;
 		float:right;
-		width:20%;
-        margin-right:5%;
+		width:10%;
+        margin-right:3%;
         margin-top:20px;
         padding: 3% 3% 3% 3%;
+        -webkit-box-shadow:0 5px 10px #aaa;
+    	-moz-box-shadow:0 5px 10px #aaa;
+		box-shadow:0 5px 10px #aaa;
 	}
+    
+    #main > aside {
+        margin-right: 4%;
+        width: 22%;
+        border-radius:10px;
+    }
     
     #main aside section{
         display: list-item;
@@ -367,28 +384,3 @@ nav a:hover{
   h2, h3 { page-break-after: avoid; }
 }
 
-/* My style */
-
-#header-container header {
-    position: absolute;
-    line-height: 200%;
-    display: inline-block;
-    width: auto;
-    margin-left:45%;
-}
-
-#main > section {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 59%;
-    margin-left: 4%;
-}
-#main > aside {
-    margin-right: 4%;
-    width: 29%;
-}
-#main-container * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
